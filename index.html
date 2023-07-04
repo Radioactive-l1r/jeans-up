@@ -49,6 +49,17 @@
     </style>
 </head>
 <body>
+    <script>
+        var imageContainer = document.getElementById('image-container');
+      
+        for (var i = 2; i <= 8; i++) {
+          var img = document.createElement('img');
+          img.src = i + '.png';
+          img.alt = 'Image ' + i;
+          imageContainer.appendChild(img);
+        }
+      </script>
+
     <div class="container">
         <h1 class="title">Jeans Up</h1>
         <!-- Rest of your webpage content goes here -->
@@ -68,7 +79,7 @@
             <img class="image" src="jean_img (3).jpg" alt="Image 3"> 
           </div>
 
-
+          <div id="image-container"></div>
         
         
           <hr>
