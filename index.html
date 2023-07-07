@@ -4,97 +4,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-image: url("pics/white_.jpg");
+            font-family:    'Lucida Sans Unicode';
+            background-size: cover;
+          
+            background-position: center center;
+            color: white;
+            /* background-attachment: fixed; */
+            background-position: center center;
         }
 
         .container {
             max-width: 960px;
             margin: 0 auto;
-            padding: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }.head {
+            max-width: 95%;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
+
         .title {
+            text-align: center;
             font-size: 50px;
             font-weight: bold;
-            margin: 10px 0;
+            margin: 1px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }.h2{
+            font-size: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }.label{
+            font-size: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .image {
-            width: 100%;
-            margin-bottom: 10px;
-           
-        }.grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-        grid-gap: 10px; /* Adjust the gap between images as needed */
-        }.  hr {
+        .slogan{
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      
+      grid-gap: 30px;
+    }
+
+    .grid-item {
+      text-align: center;
+    }  .grid-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    } 
+    .grid-item:hover img {
+      transform: scale(1.1);
+    }
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 2%;
+      /* box-shadow: 2px 2px 4px rgba(255, 245, 245, 0.5); */
+    }. hr {
     border: none;
     height: 1px;
     background-color: #000;
     margin: 20px 0;
-  }.divider {
-  width: 1px;
-  height: 100px; /* Adjust the height as needed */
-  background-color: black;
-  margin: 0 20px; /* Adjust the margin as needed */
-}
-
+  }
 
         @media (max-width: 600px) {
             .title {
                 font-size: 20px;
+              
+            }
+            .h2{
+                font-size: 12px;
+            }.slogan{
+                font-size: 10px;
+            }.label{
+                font-size: 10px;
+            }
+            .grid-container{
+                grid-template-columns: repeat(2, 1fr);
+      
             }
         }
     </style>
     
 </head>
+<script>
+    window.addEventListener("scroll", function() {
+      const scrollPosition = window.pageYOffset;
+      document.body.style.backgroundPositionY = -scrollPosition + "px";
+    });
+  </script>
 <body>
-    <script>
-        var imageContainer = document.getElementById('image-container');
-      
-        for (var i = 2; i <= 8; i++) {
-          var img = document.createElement('img');
-          img.src = i + '.png';
-          img.alt = 'Image ' + i;
-          imageContainer.appendChild(img);
-        }
-      </script>
-
-    <div class="container">
-    <h1 class="title">Jeans Up</h1>
-        <!-- Rest of your webpage content goes here -->
-        <h2 >Get Jeans in your deals</h2>
+        <div class="head">
+            <h1 class="title">Minimalistic Woods</h1>
+            <!-- Rest of your webpage content goes here -->
+            <h1 class="h2">since 1982</h1>
         <hr>
-        <h5> Latest jeans since 22nd June 2023 </h5>
-        <h4>In 4 shades denim jeans at 550 Rs</h4>
-        <img class="image" src="jean_img (1).jpg" alt="Image 1">
-        
-        <h4>Ankle jeans at 550 Rs</h4>
-        <img class="image" src="jean_img (2).jpg" alt="Image 2">
-        <h4>Bell Bottom jeans in all blue shades at 400 Rs per piece and 700 for two.</h4>
-        <img class="image" src="jean_img (3).jpg" alt="Image 3">
-        <div class="grid-container">
-            <img class="image" src="jean_img (1).jpg" alt="Image 1">
-            <img class="image" src="jean_img (2).jpg" alt="Image 2">
-            <img class="image" src="jean_img (3).jpg" alt="Image 3"> 
-          </div>
-
-          <div id="image-container"></div>
-        
-        
-          <hr>
-            <div class="section">
-            <h4>Location</h4>
-            <p>Near Bustand Belgavi | <a href="https://goo.gl/maps/HjH6g8n1bZV4Uoha8"  target="_blank">GET DIRECTIONS</a></p> 
-           
         </div>
        
-        <div class="section">
-            <h4>Contact haha</h4>
-            <p>Phone: +1234567890</p>
-            <p><a href="tel:+918431452292">Call us</a> </p>
+        
+      
+       <p class="slogan">Get the real Structures CRAVED out of woods in a most Minimalistic way.</p>
+        <!-- Rest of your webpage content goes here -->
+       
+        <div class="grid-container">
+            <div class="grid-item">
+           
+              <img class="image" src="pics/1.png" alt="Image 1" >
+              <p class="label">Take this home, to get it</p>
+            </div>
+            <div class="grid-item">
+              
+              <img class="image" src="pics/2.png"Image 3">
+              <p class="label">Take this home, to get it</p>
+            </div>
+            <div class="grid-item">
+            
+              <img class="image" src="pics/3.png" alt="Image 2">
+              <p class="label">Take this home, to get it</p>
+            </div>
+            <div class="grid-item">
+          
+              <img class="image" src="pics/4.png" alt="Image 3">
+              <p class="label">Take this home, to get it</p>
+            </div>
+            <div class="grid-item">
+            
+              <img class="image" src="pics/5.png" alt="Image 2">
+              <p class="label">Take this home, to get it</p>
+            </div>
+            <div class="grid-item">
+              
+              <img class="image" src="pics/6.png" alt="Image 3">
+              <p class="label">Take this home, to get it</p>
+            </div>
+          </div> 
+          </div>
+         
+        <img class="image" src="pics/7.png" alt="Image 1">
+
+        <div style="display: flex; align-items: center;">
+            <div style="flex: 1;margin: 10px;">
+                <img class="image" src="pics/8.png" alt="Image 2">
+              </div>
+              <div style="flex: 1;margin: 10px;">
+                <img class="image" src="pics/12.png" alt="Image 2">
+              </div>
+            
+          
+          </div>
+    
+        <div class="container">
+       
+       
+       
+
         </div>
-    </div>
+        <div style="display: flex; align-items: center;">
+            <div style="flex: 1;margin: 20px;">
+              <img class="image" src="pics/9.png" alt="Image 2">
+            </div>
+            <div style="flex: 1; margin-left: 5px; font-size: 30px  ; ">
+              <p >Bell Bottom jeans in all blue shades at 400 Rs per piece and 700 for tw Bell Bottom jeans in all blue shades at 400 Rs per piece and 700 for twoBell Bottom jeans in all blue shades at 400 Rs per piece and 700 for two.</p>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center;">
+          
+            <div style="flex: 1; margin-left: 5px; font-size: 30px  ; text-align: right;">
+                <p >Bell Bottom jeans in all blue shades at 400 Rs per piece and 700 for tw Bell Bottom jeans in all blue shades at 400 Rs per piece and 700 for twoBell Bottom jeans in all blue shades at 400 Rs per piece and 700 for two.</p>
+              </div>
+            <div style="flex: 1;margin: 20px;">
+              <img class="image" src="pics/10.png" alt="Image 2">
+            </div>
+          
+          </div>
+          <div style="display: flex; align-items: center;">
+            <div style="flex: 1;margin: 20px;">
+                <img class="image" src="pics/11.png" alt="Image 2">
+              </div>
+            <div style="flex: 1; margin-left: 5px; font-size: 30px  ; text-align: left;">
+                <p >Bell Bottom jeans in all blue shades at 400 Rs per piece and 700 for tw Bell Bottom jeans in all blue shades at 400 Rs per piece and 700 for twoBell Bottom jeans in all blue shades at 400 Rs per piece and 700 for two.</p>
+              </div>
+            
+          
+          </div>
+          <hr>
+          <p class="label">MinimalisticWoods@gmail.com | +918845787481</p>
 </body>
 </html>
